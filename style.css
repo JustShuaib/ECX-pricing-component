@@ -26,7 +26,7 @@ body {
   font-size: 1.2rem;
 }
 .container__copy {
-  color: hsl(225, 100%, 54%);
+  color: hsl(225, 20%, 60%);
   text-align: center;
   line-height: 1.5rem;
   letter-spacing: 0.05r em;
