@@ -30,16 +30,14 @@ body {
   text-align: center;
   line-height: 1.5rem;
   letter-spacing: 0.05r em;
-  /* width: 14rem; */
-  width: clamp(14rem, 100% - 2rem);
-  /* width: min(14rem, 100% - 2rem); */
+  width: 14rem;
   margin: 1rem auto;
 }
-/* @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
   .container__copy {
     width: auto;
   }
-} */
+}
 .card__billing-label {
   margin: 0 0.3rem;
   width: 2.1875rem;
