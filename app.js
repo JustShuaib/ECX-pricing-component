@@ -4,14 +4,18 @@ const range = document.getElementById("range"),
   pageViews = document.getElementById("page-views"),
   discountText = document.getElementById("discount");
 
+let text = 16,
+  views;
+
 window.addEventListener("load", () => {
   if (window.innerWidth >= 800) {
     discountText.textContent = "25% discount";
   }
 });
-let text = 16,
-  views;
-range.addEventListener("input", (e) => {
+range.addEventListener("input", changePageViews);
+switchBtn.addEventListener("change", yearlyBilling);
+
+function changePageViews(e) {
   const val = range.value,
     min = range.min,
     max = range.max,
@@ -40,11 +44,11 @@ range.addEventListener("input", (e) => {
 
   price.textContent = `$${(isChecked ? discountedPrice : text).toFixed(2)}`;
   pageViews.textContent = views;
-});
+}
 
-switchBtn.addEventListener("change", (e) => {
+function yearlyBilling(e) {
   const isChecked = e.target.checked;
   const discount = 0.25 * text,
     discountedPrice = text - discount;
   price.textContent = `$${(isChecked ? discountedPrice : text).toFixed(2)}`;
-});
+}
